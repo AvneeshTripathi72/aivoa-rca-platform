@@ -260,3 +260,12 @@ Tool used: document_extraction
  ALL 3 VIDEO TOOLS & E2E FLOW VERIFIED 100% 
 ==========================================
 ```
+
+---
+
+## 7. Institutional Affiliation & Credits
+
+- **Author / Developer:** [Avneesh Tripathi](https://github.com/AvneeshTripathi72)
+- **Institution:** [KIET Group of Institutions](https://www.kiet.edu/)
+- **Platform:** AIVOA.AI — AI-Powered Root Cause Analysis (RCA) Module & Copilot for Pharmaceutical API Manufacturing
+

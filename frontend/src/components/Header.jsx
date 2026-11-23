@@ -73,6 +73,16 @@ export default function Header() {
             <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
             <span>ALCOA+ Traceable</span>
           </div>
+
+          <a
+            href="https://www.kiet.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="KIET Group of Institutions"
+            className="hidden lg:flex px-2.5 py-1 rounded bg-indigo-950/60 text-indigo-300 hover:text-white hover:bg-indigo-900 text-xs border border-indigo-700/50 items-center space-x-1.5 transition"
+          >
+            <span>KIET Group of Institutions</span>
+          </a>
         </div>
 
         {/* Right CTA Actions */}

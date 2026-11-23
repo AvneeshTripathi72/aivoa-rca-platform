@@ -73,7 +73,7 @@ export default function Sidebar() {
       </div>
 
       {/* Footer Regulatory Context Card */}
-      <div className="p-4 border-t border-slate-100 bg-slate-50/50">
+      <div className="p-4 border-t border-slate-100 bg-slate-50/50 space-y-2">
         <div className="flex items-start space-x-2 text-[11px] text-slate-500 leading-tight">
           <Info className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
           <div>
@@ -82,6 +82,17 @@ export default function Sidebar() {
               AI investigates and recommends. Qualified Quality Humans review, validate, and approve.
             </p>
           </div>
+        </div>
+        <div className="pt-2 border-t border-slate-200/60 text-[10px] text-slate-500 flex items-center justify-between">
+          <span>Affiliation</span>
+          <a 
+            href="https://www.kiet.edu/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="font-semibold text-indigo-600 hover:text-indigo-800 underline transition"
+          >
+            KIET Group of Institutions
+          </a>
         </div>
       </div>
     </aside>

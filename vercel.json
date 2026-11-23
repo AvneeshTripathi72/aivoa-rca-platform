@@ -15,7 +15,8 @@
   ],
   "functions": {
     "api/index.py": {
-      "includeFiles": "backend/**",
+      "includeFiles": "backend/app/**",
+      "excludeFiles": "{frontend/**,node_modules/**,docs/**,uploads/**,scratch/**,*.md,*.db}",
       "maxDuration": 60,
       "memory": 1024
     }

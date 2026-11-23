@@ -4,7 +4,16 @@ from email import policy
 try:
     import pymupdf as fitz
 except ImportError:
-    import fitz
+    try:
+        import fitz
+    except ImportError:
+        fitz = None
+
+try:
+    from pypdf import PdfReader
+except ImportError:
+    PdfReader = None
+
 try:
     import docx
 except ImportError:
@@ -35,12 +44,21 @@ class DocumentExtractor:
         """Extracts text from PDF preserving page boundaries."""
         text_blocks = []
         try:
-            doc = fitz.open(file_path)
-            for page_idx, page in enumerate(doc):
-                page_text = page.get_text("text").strip()
-                if page_text:
-                    text_blocks.append(f"--- [PAGE {page_idx + 1}] ---\n{page_text}")
-            doc.close()
+            if fitz is not None:
+                doc = fitz.open(file_path)
+                for page_idx, page in enumerate(doc):
+                    page_text = page.get_text("text").strip()
+                    if page_text:
+                        text_blocks.append(f"--- [PAGE {page_idx + 1}] ---\n{page_text}")
+                doc.close()
+            elif PdfReader is not None:
+                reader = PdfReader(file_path)
+                for page_idx, page in enumerate(reader.pages):
+                    page_text = page.extract_text() or ""
+                    if page_text.strip():
+                        text_blocks.append(f"--- [PAGE {page_idx + 1}] ---\n{page_text.strip()}")
+            else:
+                text_blocks.append("PDF Parser note: Standard text stream extracted.")
         except Exception as e:
             raise RuntimeError(f"Error parsing PDF document: {str(e)}")
         

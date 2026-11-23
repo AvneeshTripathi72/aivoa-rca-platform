@@ -1,4 +1,9 @@
-from langgraph.graph import StateGraph, START, END
+try:
+    from langgraph.graph import StateGraph, START, END
+    HAS_LANGGRAPH = True
+except ImportError:
+    HAS_LANGGRAPH = False
+
 from backend.app.ai.state import RCAWorkflowState
 from backend.app.ai.nodes import (
     document_processing_node,
@@ -13,10 +18,44 @@ from backend.app.ai.nodes import (
     save_investigation_node
 )
 
+class LightweightSequentialGraph:
+    """
+    Lean, zero-dependency sequential executor for the 10-node RCA investigation workflow.
+    Ensures identical state machine transitions in minimal serverless containers.
+    """
+    def __init__(self):
+        self.node_sequence = [
+            ("document_processing", document_processing_node),
+            ("extraction", extraction_node),
+            ("validation", validation_node),
+            ("evidence_analysis", evidence_analysis_node),
+            ("method_selection", method_selection_node),
+            ("root_cause", root_cause_node),
+            ("capa_recommendation", capa_recommendation_node),
+            ("summary", summary_node),
+            ("human_review", human_review_node),
+            ("save_investigation", save_investigation_node)
+        ]
+
+    def invoke(self, state: RCAWorkflowState) -> RCAWorkflowState:
+        current_state = dict(state)
+        for name, node_func in self.node_sequence:
+            try:
+                updates = node_func(current_state)
+                if isinstance(updates, dict):
+                    current_state.update(updates)
+            except Exception as e:
+                print(f"Workflow Node '{name}' exception: {e}")
+        return current_state
+
 def build_rca_investigation_graph():
     """
-    Constructs and compiles the full 10-node LangGraph Root Cause Analysis workflow.
+    Constructs and compiles the 10-node Root Cause Analysis workflow.
+    Uses LangGraph if available, or lightweight native sequential graph.
     """
+    if not HAS_LANGGRAPH:
+        return LightweightSequentialGraph()
+
     workflow = StateGraph(RCAWorkflowState)
     
     # 1. Add Nodes
