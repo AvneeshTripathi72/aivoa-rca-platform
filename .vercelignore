@@ -1,0 +1,28 @@
+# Python & Environments
+backend/venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node & Dependencies
+frontend/node_modules/
+node_modules/
+
+# Local database
+*.db
+*.sqlite3
+
+# Large media files (prevents exceeding Vercel 100MB/250MB deployment limit)
+uploads/*.mp4
+uploads/*.mp3
+uploads/frames/
+uploads/demo_video.mp4
+uploads/demo_audio.mp3
+
+# Scratch & Temporary Logs
+scratch/
+.system_generated/
+*.log
