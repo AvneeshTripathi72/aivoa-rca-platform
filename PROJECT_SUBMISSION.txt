@@ -1,0 +1,70 @@
+================================================================================
+AIVOA.AI — AI-POWERED ROOT CAUSE ANALYSIS (RCA) MODULE & COPILOT
+================================================================================
+
+LIVE APPLICATION URL:
+https://aivoa-rca-platform.vercel.app
+
+GITHUB REPOSITORY URL:
+https://github.com/AvneeshTripathi72/aivoa-rca-platform
+
+VIDEO DEMONSTRATION WALKTHROUGH:
+https://drive.google.com/file/d/1av2lzDPx8YMSzTrIz7w51HTRWBz3_5Nj/view
+
+CANDIDATE / DEVELOPER:
+Avneesh Tripathi (GitHub: https://github.com/AvneeshTripathi72)
+Email: avanishtripathiavanish79921170@gmail.com
+
+INSTITUTIONAL AFFILIATION:
+KIET Group of Institutions (https://www.kiet.edu/)
+
+REGULATORY STANDARDS:
+ICH Q7 (GMP for APIs), ICH Q9 (Quality Risk Management), ICH Q10 (QMS),
+21 CFR Part 11 / 21 CFR 211, and ALCOA+ Data Integrity Principles.
+
+--------------------------------------------------------------------------------
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+This platform implements an enterprise AI-powered Root Cause Analysis (RCA)
+and quality incident triage solution for pharmaceutical manufacturing.
+
+It faithfully reproduces the split-screen workflow demonstrated in the
+AIVOA reference video (AIVOA- complaints module demo.mp4):
+
+1. SPLIT-SCREEN COPILOT TRIAGE (/investigations/new):
+   - Left Panel: 4-Section QMS Intake Ledger (Origin & Customer Details,
+     Product & Batch ID, Facility & Material Impact, Defect / Excursion Analysis).
+   - Empty fields display "Awaiting AI extraction..." with red ban circle icon.
+   - Dedicated "AI Copilot Risk Assessment" card (Severity, Defect Nature, Regulatory Impact).
+   - Three demonstrated Copilot tools:
+     * Tool 1: Log Complaint / Incident (natural language extraction)
+     * Tool 2: Edit Complaint / Refine (conversational field refinement)
+     * Tool 3: Document Extraction (PDF / DOCX ingestion via PyMuPDF/pypdf)
+   - "Commit to QMS Ledger & Launch RCA" action button.
+
+2. DEEP ROOT CAUSE ANALYSIS HUB (/investigations/:id):
+   - Interactive 5 Whys Analysis with confidence scoring & human validation gates.
+   - 6M Ishikawa Fishbone Analysis (Machine, Method, Material, Measurement, Man, Environment).
+   - Evidence Registry with laboratory results, SCADA logs, and SOP references.
+   - CAPA Action Matrix (Corrective & Preventive Actions, Owner assignment, Due dates).
+   - ALCOA+ Executive Summary & Formal Sign-Off.
+
+3. TECH STACK:
+   - Frontend: React 18.3, Redux Toolkit, Tailwind CSS, Lucide Icons, Recharts, Axios.
+   - Backend: Python FastAPI, SQLAlchemy 2.0, Pydantic v2, Groq LLM API.
+   - Resilience: Client-side dummy data fallback engine ensures 100% uptime with zero crashes.
+   - Cloud: Vercel Serverless deployment (https://aivoa-rca-platform.vercel.app).
+
+--------------------------------------------------------------------------------
+HOW TO TEST THE LIVE APPLICATION
+--------------------------------------------------------------------------------
+1. Open https://aivoa-rca-platform.vercel.app
+2. Click "New Investigation" to enter the split-screen Copilot workspace.
+3. Click the "Apollo Pharmacy Complaint" shortcut pill, or type:
+   "Log a customer complaint from Apollo Pharmacy regarding Atorvastatin Calcium 20mg, batch number ATC-2026-088. Customer reports tablet discoloration and specking in blister packs. 120 blister packs affected."
+4. Observe the form populate on the left and the AI Copilot Risk Assessment card update.
+5. Test conversational refinement by typing:
+   "ah sorry the batch number is BMX240602 and the affected quantity is 48 capsules"
+6. Observe the batch number and affected quantity update while preserving all other data.
+7. Click "Commit to QMS Ledger & Launch RCA" to explore the 5 Whys, 6M Fishbone, Evidence, and CAPA matrix.
+================================================================================

@@ -1,5 +1,16 @@
 # AIVOA.AI — AI-Powered Root Cause Analysis (RCA) Platform & AIVOA Copilot for Pharmaceutical Quality Operations
 
+[![Live Demo](https://img.shields.io/badge/Live_Application-Vercel-success?style=for-the-badge&logo=vercel)](https://aivoa-rca-platform.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/AvneeshTripathi72/aivoa-rca-platform)
+[![Video Walkthrough](https://img.shields.io/badge/Video_Demo-Google_Drive-red?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1av2lzDPx8YMSzTrIz7w51HTRWBz3_5Nj/view)
+[![Institution](https://img.shields.io/badge/Affiliation-KIET_Group_of_Institutions-purple?style=for-the-badge)](https://www.kiet.edu/)
+
+- 🌐 **Live Deployed Application:** [https://aivoa-rca-platform.vercel.app](https://aivoa-rca-platform.vercel.app)
+- 📂 **GitHub Repository:** [https://github.com/AvneeshTripathi72/aivoa-rca-platform](https://github.com/AvneeshTripathi72/aivoa-rca-platform)
+- 🎥 **Reference Video Demonstration:** [Google Drive Demo Link](https://drive.google.com/file/d/1av2lzDPx8YMSzTrIz7w51HTRWBz3_5Nj/view)
+- 🏛️ **Institutional Affiliation:** [KIET Group of Institutions](https://www.kiet.edu/)
+- 👨‍💻 **Developer / Candidate:** [Avneesh Tripathi](https://github.com/AvneeshTripathi72)
+
 > **Regulatory Compliance Context:** Conforming to ICH Q7 (GMP for Active Pharmaceutical Ingredients), ICH Q9 (Quality Risk Management), ICH Q10 (Pharmaceutical Quality Systems), 21 CFR Part 11 / 21 CFR 211, Schedule M, and ALCOA+ Data Integrity Principles.
 >
 > **Core Product Philosophy:** *AI investigates and recommends. Qualified Quality Professionals review, validate, edit, and approve.* Every AI finding is marked strictly as a hypothesis or evidence-supported candidate. No AI hypothesis is ever presented as a scientifically confirmed fact without formal human validation.
